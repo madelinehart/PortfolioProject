@@ -109,7 +109,7 @@ FROM PortfolioProjectA..PrescriberInfo
 GROUP BY State 
 ORDER BY PrescriptionsPerState DESC
 )
-Select State, ProvidersPerState, PrescriptionsPerState, (PrescriptionsPerState/ProvidersPerState)*100 AS PrescriptionsPerProvider
+Select State, ProvidersPerState, PrescriptionsPerState, (PrescriptionsPerState/ProvidersPerState) AS PrescriptionsPerProvider
 From ProvidersVSPrescriptions
 Order By PrescriptionsPerProvider DESC
 
